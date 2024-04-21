@@ -70,7 +70,7 @@ export const Content = [
         <p>Özetlemek gerekirse, ilkel veri tipleri doğrudan değerlerdir ve bellekte sabit bir boyutta saklanırken, referans veri tipleri bellekte adreslere işaret eder ve bu adreslere bağlı olarak veriye erişilir. </p>
      </>
     )
-  },{ question :" 5. . JavaScript MultiThread bir dil midir Single Thread bir dil midir?",  answer : (<> 
+  },{ question :" 5. JavaScript MultiThread bir dil midir Single Thread bir dil midir?",  answer : (<> 
   <p>JavaScript, temel olarak Single-Threaded bir dildir. Bu, JavaScript'in aynı anda sadece bir iş parçacığı (thread) üzerinde çalıştığı anlamına gelir. Tarayıcı ortamında, JavaScript kodu genellikle "Ana İş Parçacığı" veya "UI İş Parçacığı" olarak adlandırılan tek bir iş parçacığında çalışır. Bu iş parçacığı, kullanıcı arayüzü (UI) ile ilgili işlemleri gerçekleştirir ve JavaScript kodunu yürütür.</p>
   <p>Ancak, JavaScript'in bu Single-Threaded doğası, Web API'lerinin (Web API'ler, tarayıcı tarafından sağlanan ek fonksiyonlar ve işlevlerdir) kullanımıyla etkileşime girer. Örneğin, bir HTTP isteği yapmak için XMLHttpRequest veya fetch kullanıldığında, bu işlemler asenkron olarak gerçekleşir ve ana iş parçacığını bloke etmez. Benzer şekilde, zamanlayıcılar (timers) veya DOM olayları gibi diğer asenkron işlemler de mevcuttur.</p>
   <p>Ayrıca, JavaScript'in son zamanlarda Web Workers olarak bilinen çoklu iş parçacığı desteği eklenmiştir. Web Workers, JavaScript kodunu arka planda ayrı bir iş parçacığında çalıştırmak için kullanılır ve böylece CPU yoğun işlemleri ana iş parçacığından ayırarak tarayıcı etkileşimini engellemeyi önler.</p>
@@ -82,12 +82,30 @@ export const Content = [
 
 
 </p>
-   </> )  }
-
+   </> )  },
+   { question :" 6. == ve === farkı nedir?",
+     answer : (<> == (denklik operatörü): İki değerin eşit olup olmadığını kontrol eder. Ancak, bu operatör sadece değerleri karşılaştırırken, veri türlerini dikkate almaz. Eğer karşılaştırılan veri türleri farklı ise, JavaScript, değerleri karşılaştırırken otomatik olarak tür dönüşümü yapar ve sonuçları karşılaştırır.
+     <p>Örneğin:</p>
+     
+     javascript
+     Copy code
+     console.log(5 == "5"); // true, çünkü JavaScript, sayısal ve dize değerlerini otomatik olarak karşılaştırırken sayısal değeri dizeye dönüştürür ve sonuç olarak iki değer eşittir.
+     <p>=== (katı denklik operatörü): Bu operatör, hem değerlerin hem de veri türlerinin aynı olup olmadığını kontrol eder. Yani, eğer karşılaştırılan iki değer aynı türde değilse, === operatörü hemen false döner.</p>
+     Örneğin:
+     
+     javascript
+     Copy code
+     console.log(5 === "5"); // false, çünkü bu sefer tür dönüşümü yapılmaz ve sayısal ve dize değerleri farklı türlerde olduğu için karşılaştırma sonucu false olur.
+     Bu nedenle, genel olarak, tipik olarak === operatörünü tercih etmek, beklenmeyen sonuçlara yol açabilecek olan tür dönüşümlerinden kaçınmak için daha güvenlidir. Ancak, bazı durumlarda, özellikle null veya undefined'ı kontrol ederken == operatörü kullanılabilir, çünkü bu durumlarda değerler aynı sonucu verir. </> )  }
+    ,
+         { question :" 7. == ve === farkı nedir?",
+         answer : (<> </> )  }
 ];
 
 
-//  ,{ question :" 4. JavaScript’te hangi veri tipleri kullanılır?",  answer : (<> </> )  }
+//  ,
+//   { question :" 7. == ve === farkı nedir?",
+//   answer : (<> </> )  }
    
     
     

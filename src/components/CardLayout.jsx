@@ -15,7 +15,7 @@ export default function CardLayout({ content }) {
   return (
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-md-10">
+        <div className="col-md-10 rounded shadow">
           <div id="carouselExample" className="carousel slide">
             <div className="carousel-inner">
               {content.map((item, index) => (
